@@ -47,26 +47,29 @@ The dataset includes nutrient information (energy, protein, fat, vitamins, and m
 
 ## 📌 10 Medium-Level Pandas Analysis Questions
 
-1. Find the top 10 food items with the highest protein content.
-2. Compute average fat content per `Food_Group`.
-3. Identify the food item with the highest calcium content.
-4. Check correlation between carbohydrate and energy.
-5. Find top 5 fiber-rich foods in the "Pulses" subgroup.
-6. Count number of food items per `Sub_Group`.
-7. Compute average `Vitamin_A_mcg` for each `Food_Group`.
-8. Filter foods with sodium < 100 mg and fat < 5g.
-9. Group by `Sub_Group` and compute mean `Protein_g`.
-10. Find top 5 foods with highest selenium content.
+1. List the top 10 dishes with the highest protein content.
+2. Find the average calories per dish.
+3. Which dish has the highest calcium content?
+4. Count how many dishes have more than 20g of carbohydrates.
+5. What is the average sodium content across all dishes?
+6. Group the dishes by high (>10g) vs low (≤10g) fat content and calculate the average protein.
+7. Find dishes with both low sugar (<5g) and high fibre (>5g).
+8. Calculate the correlation between calories and fats.
+9. Identify dishes that are high in iron (>10mg) and vitamin C (>20mg).
+10. Create a new column `calorie_density = Calories / (Protein + Carbohydrates + Fats)` and sort the top 5 dishes.
+
 
 ---
 
 ## 🚀 5 Complex-Level Pandas Analysis Questions
 
-1. Rank all foods within each `Food_Group` by `Vitamin_B12_mcg`.
-2. Use multi-index (`Food_Group`, `Sub_Group`) to calculate average of Ca, Mg, and P.
-3. Perform PCA on nutritional columns to reduce dimensionality and cluster food types.
-4. Apply KMeans clustering to group food items based on nutrients.
-5. Create a composite “Nutri Score” using weighted sum of Protein, Fiber, and Vitamins.
+1. Normalize all continuous nutrient columns and perform KMeans clustering to group similar dishes nutritionally.
+2. Apply PCA (Principal Component Analysis) to reduce dimensions and visualize nutritional profiles in 2D.
+3. Create a custom “Health Score” using a weighted formula:  
+   `score = 0.4*Fibre + 0.3*Protein - 0.2*Free Sugar - 0.1*Sodium`
+   and rank dishes.
+4. Group dishes by calorie range (e.g., <200, 200–400, >400) and compute average values of all other nutrients.
+5. Build a pairplot using seaborn to visualize relationships between all nutrients and identify outliers.
 
 ---
 
